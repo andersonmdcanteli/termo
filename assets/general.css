@@ -1,0 +1,3 @@
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner input:not([type=radio]):not([type=checkbox]){
+    color: whitesmoke !important;
+}
