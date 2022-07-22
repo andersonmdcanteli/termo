@@ -4,10 +4,11 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 
 ## ----- Dataset imports ----- ##
-from datasets import uma_palavra
+from datasets import df_termo_datasets
 
 ## ----- loading datasets ----- ##
-df_uma_palavra = uma_palavra.df
+df_uma_palavra = df_termo_datasets.df_uma_palavra
+df_duas_palavras = df_termo_datasets.df_duas_palavras
 
 ## ----- constants ----- ##
 BACKGROUNDCOLOR = '#6E5C62'
@@ -284,7 +285,34 @@ def update_tabela_termo(tipo_calculo, page_size, n_palavras):
             df = df[['palavras', 'forca_global_peso', 'rank_global_peso']]
             df.rename(columns={"palavras": "Palavras", "forca_global_peso": "Força", "rank_global_peso": "Rank"}, inplace=True)
 
+    elif n_palavras == "2":
+        # acessando o DataFrame certo
+        df = df_duas_palavras.copy()
+        # --- Parâmetros de estilo --- #
+        style_cell_conditional = [
+            {'if': {'column_id': 'Palavra 1'},
+             'width': '20%'},
+            {'if': {'column_id': 'Palavra 2'},
+             'width': '20%'},
+            {'if': {'column_id': 'Rank'},
+             'width': '30%'},
+        ] # ajustando o tamanho das colunas externas
+        if tipo_calculo == "Geral":
+            # --- filtro --- #
+            df = df[['palavra_1', 'palavra_2', 'forca_global', 'rank_global']]
+            df.rename(columns={"palavra_1": "Palavra 1", "palavra_2": "Palavra 2", "forca_global": "Força", "rank_global": "Rank"}, inplace=True)
 
+        elif tipo_calculo == "Pesos":
+            # --- filtro --- #
+            df = df[['palavra_1', 'palavra_2', 'forca_peso', 'rank_peso']]
+            df.rename(columns={"palavra_1": "Palavra 1", "palavra_2": "Palavra 2", "forca_peso": "Força", "rank_peso": "Rank"}, inplace=True)
+
+        else:
+            # --- filtro --- #
+            df = df[['palavra_1', 'palavra_2', 'forca_global_peso', 'rank_global_peso']]
+            df.rename(columns={"palavra_1": "Palavra 1", "palavra_2": "Palavra 2", "forca_global_peso": "Força", "rank_global_peso": "Rank"}, inplace=True)
+    else:
+        pass
 
     # obtendo name, id e type para cada coluna
     columns = []
@@ -301,6 +329,7 @@ def update_tabela_termo(tipo_calculo, page_size, n_palavras):
                 # style_filter={'color': 'whitesmoke'}, # altera a cor do texto (necessta do css, e aqui não tem efeito)
                 style_cell_conditional = style_cell_conditional, # ajustando o tamanho das colunas externas
                 filter_action="native", # adiciona a opção de filtros de forma automático
+                filter_options={'case':'insensitive'}, # permite maiusculo/minusculo e palavra parcial
                 style_filter_conditional=[ # desabilitando a opçãao de filtro para a força
                             {
                                 'if': {'column_id': c},
@@ -337,13 +366,16 @@ def update_tabela_termo(tipo_calculo, page_size, n_palavras):
 
 @callback(
     Output("termo-cabecalho", 'children'),
-    [Input('dropdown-n-palavras', 'value'),]
+    [Input('dropdown-n-palavras', 'value'),
+    Input('dropdown-tipo-calculo', 'value'),]
 )
-def update_title(n_palavras):
+def update_title(n_palavras, tipo_calculo):
     if n_palavras == "1":
-        return "TERMO - melhor primeiro chute"
+        n_palavras = "melhor primeiro chute"
     else:
-        return "TERMO - melhor par de palavras para os dois primeiros chutes"
+        n_palavras = "melhor par de palavras para os dois primeiros chutes"
+    
+    return f"TERMO - {n_palavras} ({tipo_calculo})"
 
 ## ----- Calback para abrir a aba de configurações ----- ##
 @callback(
