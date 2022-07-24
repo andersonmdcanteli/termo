@@ -25,7 +25,8 @@ server = app.server
 # Criando o layout
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
-    html.Div(id='page-content', style={'margin-right': '2.5%', 'margin-left': '2.5%', 'margin-top': '10px'}),
+    # html.Div(id='page-content', style={'margin-right': '2.5%', 'margin-left': '2.5%', 'margin-top': '10px'}),
+    html.Div(id='page-content',),
 ])
 
 
