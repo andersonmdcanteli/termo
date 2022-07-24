@@ -89,9 +89,14 @@ Todos os detalhes relacionados análise estatística, códigos e premissas adota
 
 ## Dashboard
 
-Um dashboard onde para encontrar a força de uma palavra específica foi desenvolvido e o código esta disponível na sub-pasta **[dashboard](https://github.com/andersonmdcanteli/termo/tree/main/dashboard)**. É possível alterar a forma de cálculo e a quantiadde de palavras. A Figura abaixo é um print da versão final.
+Foi desenvolvido um dashboard para encontrar a força de uma palavra específica! O código esta disponível na sub-pasta **[dashboard](https://github.com/andersonmdcanteli/termo/tree/main/dashboard)**. É possível alterar a forma de cálculo e a quantiadde de palavras. A Figura abaixo é um print da versão final.
 
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/andersonmdcanteli/termo/main/images/screenshot.PNG" alt="screenshot doa dashboard finalizando, mostrando o painel de confingurações" width="800px">
 </p>
+
+
+## Licença
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
