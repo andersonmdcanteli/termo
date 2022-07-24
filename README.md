@@ -2,7 +2,7 @@
 
 # Os melhores (ou o piores) chutes para o Termo!
 
-Descubra quais são as melhores palavras para começar o jogo termo!
+### Descubra quais são as melhores palavras para começar o jogo termo!
 
 
 
