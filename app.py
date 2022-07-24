@@ -32,7 +32,7 @@ app.layout = html.Div([
 @callback(Output('page-content', 'children'),
               Input('url', 'pathname'))
 def display_page(pathname):
-    if pathname == '/home':
+    if pathname == '/termo':
         return termo.layout
 
 

@@ -14,7 +14,7 @@ df_duas_palavras = df_termo_datasets.df_duas_palavras
 BACKGROUNDCOLOR = '#6E5C62'
 
 ## ----- links externos ----- ##
-jupyter_notebook_calculos = 'https://plot.ly'
+jupyter_notebook_calculos = 'https://colab.research.google.com/drive/1vmq6Hq2CaDEudNHVUDNd9e6bS1fikJqj?usp=sharing'
 
 ## ----- Tooltips ----- ##
 tooltip_n_palavras = html.Div([
@@ -197,7 +197,7 @@ layout = html.Div([
         # vazio
         dbc.Row([
             dbc.Col(
-            offcanvas, width='3', align="right"
+            "", width='3', align="right"
         ),
         # Titulo
         dbc.Col(
@@ -374,7 +374,7 @@ def update_title(n_palavras, tipo_calculo):
         n_palavras = "melhor primeiro chute"
     else:
         n_palavras = "melhor par de palavras para os dois primeiros chutes"
-    
+
     return f"TERMO - {n_palavras} ({tipo_calculo})"
 
 ## ----- Calback para abrir a aba de configurações ----- ##
