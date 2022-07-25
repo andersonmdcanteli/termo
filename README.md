@@ -15,7 +15,7 @@ Esse repositório guarda os scripts (Python) utilizados para determinar quais os
 
 ### Para o PRIMEIRO chute
 
-#### Top 10 melhores palavras para o primeiro chute
+#### Top 10 MELHORES palavras para o primeiro chute
 
 | Palavra | "Força" |
 | :-: | :-: 
@@ -31,7 +31,7 @@ Esse repositório guarda os scripts (Python) utilizados para determinar quais os
 | roias | 0.077286 |
 
 
-#### Top 10 piores palavras para o primeiro chute
+#### Top 10 PIORES palavras para o primeiro chute
 
 | Palavra | "Força" |
 | :-: | :-: |
@@ -50,7 +50,7 @@ Esse repositório guarda os scripts (Python) utilizados para determinar quais os
 
 ### Para os DOIS PRIMEIROS chutes
 
-#### Top 10 melhores pares de palavras para os dois primeiros chutes
+#### Top 10 MELHORES pares de palavras para os dois primeiros chutes
 
 | Palavra 1 | Palavra 2 | "Força" |
 | :-: | :-: | :-: |
@@ -66,7 +66,7 @@ Esse repositório guarda os scripts (Python) utilizados para determinar quais os
 | cures | filao	| 0.114816 |
 
 
-#### Top 10 piores pares de palavras para os dois primeiros chutes
+#### Top 10 PIORES pares de palavras para os dois primeiros chutes
 
 | Palavra 1 | Palavra 2 | "Força" |
 | :-: | :-: | :-: |
@@ -89,7 +89,7 @@ Todos os detalhes relacionados análise estatística, códigos e premissas adota
 
 ## Dashboard
 
-Foi desenvolvido um dashboard para encontrar a força de uma palavra específica! O código esta disponível na sub-pasta **[dashboard](https://github.com/andersonmdcanteli/termo/tree/main/dashboard)**. É possível alterar a forma de cálculo e a quantiadde de palavras. A Figura abaixo é um print da versão final.
+Foi desenvolvido um dashboard para encontrar a força de uma palavra específica! O código esta disponível na sub-pasta **[dashboard](https://github.com/andersonmdcanteli/termo/tree/main/dashboard)**. É possível alterar a forma de cálculo e a quantidade de palavras. A Figura abaixo é um print da versão final.
 
 
 <p align="center">
@@ -97,6 +97,15 @@ Foi desenvolvido um dashboard para encontrar a força de uma palavra específica
 </p>
 
 
+## Dataset
+
+O conjunto de dados utilizado para realizar os testes foi obtido no site do [IME](https://www.ime.usp.br/~pf/dicios/index.html), no dia 22/07/2022, e conta com um pouco mais do que 245 mil palavras em português (brasileiro).
+
+
+
 ## Licença
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+<img src="https://img.shields.io/badge/dash-008DE4?style=for-the-badge&logo=dash&logoColor=white">
+
