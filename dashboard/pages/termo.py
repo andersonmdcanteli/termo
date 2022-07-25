@@ -9,6 +9,7 @@ from datasets import df_termo_datasets
 ## ----- loading datasets ----- ##
 df_uma_palavra = df_termo_datasets.df_uma_palavra
 df_duas_palavras = df_termo_datasets.df_duas_palavras
+df_tres_palavras = df_termo_datasets.df_tres_palavras
 
 ## ----- constants ----- ##
 BACKGROUNDCOLOR = '#6E5C62'
@@ -71,8 +72,7 @@ offcanvas = html.Div(
                                 dcc.Dropdown(
                                     id = "dropdown-n-palavras", # id do elemento
                                     value = "1", # valor inicial
-                                    options = {"1": "1", "2": "2"}, # opções
-                                    # options = {"1": "1", "2": "2", "3": "3"}, # opções
+                                    options = {"1": "1", "2": "2", "3": "3"}, # opções
                                     clearable = False, # Não pode limpar
                                 )
                             )
@@ -312,7 +312,33 @@ def update_tabela_termo(tipo_calculo, page_size, n_palavras):
             df = df[['palavra_1', 'palavra_2', 'forca_global_peso', 'rank_global_peso']]
             df.rename(columns={"palavra_1": "Palavra 1", "palavra_2": "Palavra 2", "forca_global_peso": "Força", "rank_global_peso": "Rank"}, inplace=True)
     else:
-        pass
+        # acessando o DataFrame certo
+        df = df_tres_palavras.copy()
+        # --- Parâmetros de estilo --- #
+        style_cell_conditional = [
+            {'if': {'column_id': 'Palavra 1'},
+             'width': '20%'},
+            {'if': {'column_id': 'Palavra 2'},
+             'width': '20%'},
+            {'if': {'column_id': 'Palavra 3'},
+             'width': '20%'},
+            {'if': {'column_id': 'Rank'},
+             'width': '20%'},
+        ] # ajustando o tamanho das colunas externas
+        if tipo_calculo == "Geral":
+            # --- filtro --- #
+            df = df[['palavra_1', 'palavra_2', 'palavra_3', 'forca_global', 'rank_global']]
+            df.rename(columns={"palavra_1": "Palavra 1", "palavra_2": "Palavra 2", "palavra_3": "Palavra 3", "forca_global": "Força", "rank_global": "Rank"}, inplace=True)
+
+        elif tipo_calculo == "Pesos":
+            # --- filtro --- #
+            df = df[['palavra_1', 'palavra_2', 'palavra_3', 'forca_peso', 'rank_peso']]
+            df.rename(columns={"palavra_1": "Palavra 1", "palavra_2": "Palavra 2", "palavra_3": "Palavra 3", "forca_peso": "Força", "rank_peso": "Rank"}, inplace=True)
+
+        else:
+            # --- filtro --- #
+            df = df[['palavra_1', 'palavra_2', 'palavra_3', 'forca_global_peso', 'rank_global_peso']]
+            df.rename(columns={"palavra_1": "Palavra 1", "palavra_2": "Palavra 2", "palavra_3": "Palavra 3", "forca_global_peso": "Força", "rank_global_peso": "Rank"}, inplace=True)
 
     # obtendo name, id e type para cada coluna
     columns = []
