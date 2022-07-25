@@ -109,7 +109,7 @@ offcanvas = html.Div(
                             html.Div(
                                 dcc.Dropdown(
                                     id = "dropdown-tipo-calculo", # id do elemento
-                                    value = "Geral", # valor inicial
+                                    value = "Global+Pesos", # valor inicial
                                     options = {"Geral": "Geral", "Pesos": "Pesos", "Global+Pesos": "Global+Pesos"}, # opções
                                     clearable = False, # Não pode limpar
                                 )

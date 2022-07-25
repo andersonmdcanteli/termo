@@ -7,7 +7,7 @@
 
 ### Descubra quais são as melhores palavras para começar o jogo termo!
 
-Esse repositório guarda os scripts (Python) utilizados para determinar quais os melhores chutes possíveis para acertar a palavra do dia em jogos tipo Termo. Através de análise estatística, foi possível estimar quais as melhores palavras para serem utilizadas considerando duas condições:
+Esse repositório guarda os scripts (Python) utilizados para determinar quais os melhores chutes possíveis para acertar a palavra do dia em jogos tipo `Termo`. Através de análise estatística de mais de 245 mil palavras em português, foi possível estimar quais são as melhores palavras para utilizar no jogo, considerando as seguintes condições:
 
 1. Uma única palavra (sem repetição de letras)
 2. Duas palavras (sem repetição de letras)
@@ -16,12 +16,14 @@ Esse repositório guarda os scripts (Python) utilizados para determinar quais os
 
 ## Resultados
 
+A seguir estão descritos as top 10 melhores (ou piores) palavras considerando o caso onde a probabilidade de cada palavra foi penalizada considerando as posições das letras.
+
 ### Para o PRIMEIRO chute
 
 #### Top 10 MELHORES palavras para o primeiro chute
 
 | Palavra | "Força" |
-| :-: | :-: 
+| :-: | :-:
 | serao | 0.084141 |
 | terao | 0.081602 |
 | lerao | 0.080955 |
@@ -92,11 +94,11 @@ Todos os detalhes relacionados análise estatística, códigos e premissas adota
 
 ## Dashboard
 
-Foi desenvolvido um dashboard para encontrar a força de uma palavra específica! O código esta disponível na sub-pasta **[dashboard](https://github.com/andersonmdcanteli/termo/tree/main/dashboard)**. É possível alterar a forma de cálculo e a quantidade de palavras. A Figura abaixo é um print da versão final.
+Foi desenvolvido um dashboard para encontrar a "força" de uma palavra específica! O código esta disponível na subpasta **[dashboard](https://github.com/andersonmdcanteli/termo/tree/main/dashboard)**. É possível alterar a forma de cálculo e a quantidade de palavras. A Figura abaixo é um screenshot da versão finalizada.
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/andersonmdcanteli/termo/main/images/screenshot.PNG" alt="screenshot doa dashboard finalizando, mostrando o painel de confingurações" width="800px">
+<img src="https://raw.githubusercontent.com/andersonmdcanteli/termo/main/images/screenshot.PNG" alt="screenshot do dashboard finalizando, mostrando o painel de configurações" width="800px">
 </p>
 
 
@@ -109,6 +111,3 @@ O conjunto de dados utilizado para realizar os testes foi obtido no site do [IME
 ## Licença
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-
-
