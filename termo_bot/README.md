@@ -23,5 +23,5 @@ Após instalar as dependências, ative o ambiente virtual e execute o arquivo `a
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/andersonmdcanteli/termo/main/images/screenshot.PNG" alt="screenshot do TermoBot ao ser inicializado e com a solicitação do ranking da palavra termo" width="800px">
+<img src="https://raw.githubusercontent.com/andersonmdcanteli/termo/main/images/termo_bot_print.png" alt="screenshot do TermoBot ao ser inicializado e com a solicitação do ranking da palavra termo" width="800px">
 </p>
