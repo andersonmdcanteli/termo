@@ -20,3 +20,8 @@ ou se preferir:
 
 
 Após instalar as dependências, ative o ambiente virtual e execute o arquivo `app.py` para inicializar o servidor. Mas, para que o robô se conecte com o Telegram é necessário criar uma chave através do BotFather. Esta API_KEY deve ser inserida na linha 23 do script `app.py`.
+
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/andersonmdcanteli/termo/main/images/screenshot.PNG" alt="screenshot do TermoBot ao ser inicializado e com a solicitação do ranking da palavra termo" width="800px">
+</p>
