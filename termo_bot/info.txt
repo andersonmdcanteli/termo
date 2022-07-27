@@ -1,0 +1,9 @@
+Create virtualenv
+
+virtualenv C:\Users\ander\github\repositorios\termo\termo_bot\venv -p C:\Users\ander\AppData\Local\Programs\Python\Python39\python.exe
+
+Install packages
+pip install pyTelegramBotAPI
+pip install pandas
+pip install unidecode
+pip install python-dotenv
