@@ -92,6 +92,17 @@ A seguir estão descritos as top 10 melhores (ou piores) palavras considerando o
 
 Todos os detalhes relacionados análise estatística, códigos e premissas adotadas para encontrar as melhores palavras estão descritas [neste notebook](https://github.com/andersonmdcanteli/termo/blob/main/termo_analysis.ipynb), que também esta disponível via [google drive](https://colab.research.google.com/drive/1vmq6Hq2CaDEudNHVUDNd9e6bS1fikJqj?usp=sharing).
 
+## TeleBot
+
+Os resultados foram adaptados para um robô de Telegram com `pyTelegramBotAPI`, que utiliza os resultados obtidos para responder ao usuário:
+
+- quais são as melhores palavras para utilizar no primeiro chute;
+- quais são as melhores palavras para utilizar nos dois primeiros chutes;
+- qual o ranking de uma determinada palavra;
+- qual o ranking de um determinado par de palavras
+
+O repositório com os códigos esta disponível na subpasta **[termo_bot](https://github.com/andersonmdcanteli/termo/tree/main/termo_bot)**. Ele foi adaptado com `Flask` para ser disponibilizado através do `heroku`, e (talvez) possa ser acessado neste link [https://t.me/termobotbot](https://t.me/termobotbot).
+
 ## Dashboard
 
 Foi desenvolvido um dashboard para encontrar a "força" de uma palavra específica! O código esta disponível na subpasta **[dashboard](https://github.com/andersonmdcanteli/termo/tree/main/dashboard)**. É possível alterar a forma de cálculo e a quantidade de palavras. A Figura abaixo é um screenshot da versão finalizada.
