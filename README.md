@@ -104,7 +104,7 @@ Os resultados foram adaptados para um robô de Telegram com `pyTelegramBotAPI`, 
 O repositório com os códigos esta disponível na subpasta **[termo_bot](https://github.com/andersonmdcanteli/termo/tree/main/termo_bot)**. Ele foi adaptado com `Flask` para ser disponibilizado através do `heroku`, e (talvez) possa ser acessado neste link [https://t.me/termobotbot](https://t.me/termobotbot).
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/andersonmdcanteli/termo/main/images/termo_bot_print.png" alt="screenshot da tela inicial do TermoBot" width="800px">
+<img src="https://raw.githubusercontent.com/andersonmdcanteli/termo/main/images/termo_bot_print.png" alt="screenshot da tela inicial do TermoBot" height="800px">
 </p>
 
 
