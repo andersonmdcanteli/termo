@@ -103,6 +103,11 @@ Os resultados foram adaptados para um robô de Telegram com `pyTelegramBotAPI`, 
 
 O repositório com os códigos esta disponível na subpasta **[termo_bot](https://github.com/andersonmdcanteli/termo/tree/main/termo_bot)**. Ele foi adaptado com `Flask` para ser disponibilizado através do `heroku`, e (talvez) possa ser acessado neste link [https://t.me/termobotbot](https://t.me/termobotbot).
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/andersonmdcanteli/termo/main/images/termo_bot_print.png" alt="screenshot da tela inicial do TermoBot" width="800px">
+</p>
+
+
 ## Dashboard
 
 Foi desenvolvido um dashboard para encontrar a "força" de uma palavra específica! O código esta disponível na subpasta **[dashboard](https://github.com/andersonmdcanteli/termo/tree/main/dashboard)**. É possível alterar a forma de cálculo e a quantidade de palavras. A Figura abaixo é um screenshot da versão finalizada.
