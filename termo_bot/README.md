@@ -1,6 +1,8 @@
 # TermoBot
 
-Termo Bot é um robô para Telegram desenvolvido para ajudar na escolha de quais letras utilizar para dominar o jogo Termo. Ele é baseado em uma análise estatística que esta disponível em um outro folder neste repositório.
+TermoBot é um robô para Telegram desenvolvido para ajudar na escolha de quais letras utilizar para dominar o jogo Termo. Ele é baseado em uma análise estatística que esta disponível em um outro folder neste repositório.
+
+Versão live: Uma versão adaptada com Flask esta rodando no heroku, e pode ser acessada neste link: [https://t.me/termobotbot](https://t.me/termobotbot) (talvez seja removido no futuro). 
 
 O TermoBot foi desenvolvido utilizando pyTelegramBotAPI (4.6.1) como interface com o Telegram, e os dados são gerenciados através do Pandas (1.4.3).
 
