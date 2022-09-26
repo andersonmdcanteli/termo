@@ -9,7 +9,7 @@ Para utilizar o dashboard, instale as seguintes dependências:
 - `pandas == 1.4.3`
 
 
-> pip install requirements.txt
+> pip install -r requirements.txt
 
 
 Após instalar as dependências, ative o ambiente virtual e execute o arquivo `app.py` para inicializar o servidor. O dashborad poderá ser visualizado em `http://127.0.0.1:8050/`.
